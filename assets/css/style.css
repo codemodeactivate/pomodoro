@@ -1,3 +1,8 @@
+main {
+    display: grid;
+}
+
+
 
 #pomodoro {
     position: relative;
@@ -11,6 +16,7 @@
     background-color: #000000;
     top: 250px;
     left: 250px;
+    border-radius:35%;
 
 }
 
@@ -19,3 +25,18 @@ img {
     width: 40vh;
     height: 40vh;
 }
+
+@keyframes clockwiseSpin {
+    from  {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+    }
+ }
+ .clockwiseSpin {
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: clockwiseSpin;
+    animation-timing-function: linear;
+ }

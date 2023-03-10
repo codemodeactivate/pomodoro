@@ -12,23 +12,25 @@
 <body>
 
 <main>
-    <form>
-        <input type="text" id="work-time" value="Work Time">
-        <input type="text" id="short-break-time" value="Short Break Time">
-        <input type="text" id="long-break-time" value="Long Break Time">
-        <section id="pomodoro">
-            <img src="assets/images/tomato-icon.svg" alt="bei pomodoro rossi" />
-            <div class="time-overlay"></div>
-        </section>
-        <section id="timer">
-            <div class="time-display"></div>
-            <div class="time-controls">
-                <a href="#">Reset</a>
-                <a href="#">Start</a>
-                <a href="#">Pause</a>
-            </div>
-        </section>
-    </form>
+    <section class="inputs">
+        <form>
+            <input type="text" id="work-time" value="Work Time">
+            <input type="text" id="short-break-time" value="Short Break Time">
+            <input type="text" id="long-break-time" value="Long Break Time">
+        </form>
+    </section>
+    <section id="pomodoro">
+        <img src="assets/images/tomato-icon.svg" alt="bei pomodoro rossi" />
+        <div class="time-overlay clockwiseSpin"></div>
+    </section>
+    <section id="timer">
+        <div class="time-display"></div>
+        <div class="time-controls">
+            <a href="#">Reset</a>
+            <a href="#">Start</a>
+            <a href="#">Pause</a>
+        </div>
+    </section>
 </main>
 
 </body>
