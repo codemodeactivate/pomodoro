@@ -1,5 +1,7 @@
 # Pomodoro Timer
 
+[Demo - Work in Progress](https://codemodeactivate.github.io/pomodoro/)
+
 Ah, the ubiquitous pomodoro timer. A right of passage for new javascripters, evidently.
 
 ## User Story
