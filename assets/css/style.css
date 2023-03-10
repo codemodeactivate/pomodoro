@@ -1,14 +1,23 @@
 main {
-    display: grid;
+
 }
 
 
 
 #pomodoro {
     position: relative;
+    display: flex;
+    background-image: url("../images/tomato.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
 
 }
 
+/*Code from when the idea was forming
 .time-overlay {
     position: absolute;
     width: 40vh;
@@ -19,13 +28,6 @@ main {
     border-radius:35%;
 
 }
-
-
-img {
-    width: 40vh;
-    height: 40vh;
-}
-
 @keyframes clockwiseSpin {
     from  {
       transform: rotate(0deg);
@@ -40,3 +42,92 @@ img {
     animation-name: clockwiseSpin;
     animation-timing-function: linear;
  }
+*/
+
+img {
+    width: 40vh;
+    height: 40vh;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    gap: 20px;
+    height: 100vh;
+}
+
+.inputs {
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+ .circle {
+    position: absolute;
+    display: inline-flex;
+    overflow: hidden;
+    transform: scaleX(-1);
+  }
+
+  .circle__half {
+    height: 200px;
+    width: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .circle__half:before {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    content: "";
+    border-radius: 100px 0 0 100px;
+    background-color: #000000;
+    transform-origin: 100% 50%;
+    /* hidden by default */
+    transform: rotate(180deg);
+    opacity: 0.75;
+    animation-name: rotate-circle-half;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .circle__half--right {
+    transform: scale(-1, -1);
+  }
+
+  .circle .circle__half--right:before {
+    animation-name: rotate-circle-half--right;
+  }
+
+  /* show half of circle half of the time */
+  @keyframes rotate-circle-half {
+    0% {
+      transform: rotate(180deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes rotate-circle-half--right {
+    0% {
+      transform: rotate(180deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
