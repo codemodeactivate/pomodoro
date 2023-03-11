@@ -1,3 +1,5 @@
+
+
 main {
 
 }
@@ -60,8 +62,24 @@ main {
     height: 100vh;
 }
 
-.inputs {
+.labels {
+  display: flex;
+  align-content: space-around;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px;
+}
 
+.labels div {
+  align-self: center;
+  font-size: 1.5rem;
+}
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -82,19 +100,37 @@ main {
     overflow: hidden;
   }
 
+  input {
+    width: 80px;
+    transition: 0.2s;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 0;
+    border-bottom: 2px solid black;
+    padding: 7px 0;
+    text-align: center;
+
+  }
+  label {
+    transition: 0.2s;
+    font-size: 1.2rem;
+    padding: 7px;
+
+  }
+
   .circle__half:before {
     height: inherit;
     width: inherit;
     position: absolute;
     content: "";
     border-radius: 100px 0 0 100px;
-    background-color: #000000;
+    background-color: #ffffff;
     transform-origin: 100% 50%;
     /* hidden by default */
     transform: rotate(180deg);
     opacity: 0.75;
     animation-name: rotate-circle-half;
-    animation-duration: 4s;
+    animation-duration: 300s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }

@@ -13,10 +13,15 @@
 
 <main>
     <section class="inputs">
+        <div class="labels">
+        <div>Work Time</div>
+        <div>Short Break</div>
+        <div>Long Break</div>
+        </div>
         <form>
-            <input type="text" id="work-time" value="Work Time">
-            <input type="text" id="short-break-time" value="Short Break Time">
-            <input type="text" id="long-break-time" value="Long Break Time">
+            <input type="text" id="work-time" value="20"><label for="work-time">minutes</label>
+            <input type="text" id="short-break-time" value="5"><label for="short-break-time">minutes</label>
+            <input type="text" id="long-break-time" value="10"><label for="long-break-time">minutes</label>
         </form>
     </section>
     <section id="pomodoro">
@@ -29,9 +34,9 @@
     <section id="timer">
         <div class="time-display"></div>
         <div class="time-controls">
-            <a href="#">Reset</a>
-            <a href="#">Start</a>
-            <a href="#">Pause</a>
+            <button class="reset">Reset</a></button>
+            <button class="start">Start</a></button>
+            <button class="pause">Pause</a></button>
         </div>
     </section>
 </main>
